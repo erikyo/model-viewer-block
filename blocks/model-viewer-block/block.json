@@ -1,0 +1,44 @@
+{
+    "name": "media/model-viewer-block",
+    "title": "Model Viewer Block",
+    "description": "A 3D model viewer",
+    "attributes": {
+      "modelViewerSrc": {
+        "type": "string",
+        "default": null
+      },
+      "bg_color": {
+        "type": "string",
+        "default": "transparent"
+      },
+      "bl_height": {
+        "type": "number",
+        "default": 500
+      },
+      "arMode": {
+        "type": "string",
+        "default": "webxr"
+      },
+      "arEnablePan": {
+        "type": "boolean",
+        "default": "true"
+      },
+      "arCameraControls": {
+        "type": "boolean",
+        "default": "true"
+      },
+      "arAutoRotate": {
+        "type": "boolean",
+        "default": "false"
+      }
+    },
+    "category": "media",
+    "apiVersion": 2,
+    "supports": {
+        "html": false,
+        "multiple": false
+    },
+    "editorScript": "file:../../build/model-viewer-block-admin-page.js",
+	"editorStyle": "file:../../build/model-viewer-block-admin-page.css",
+	"style": "file:../../build/assets/js/style-blocks.frontend.css"
+}

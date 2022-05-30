@@ -26,6 +26,10 @@ registerBlockType(blockConfig.name, {
                   type: "string",
                   default: null
               },
+              modelViewerPoster: {
+                type: "string",
+                default: null
+              },
               bg_color: {
                 type: "string",
                 default: "transparent"
@@ -46,9 +50,43 @@ registerBlockType(blockConfig.name, {
                   type: "bool",
                   default: "true"
                 },
-                arAutoRotate: {
-                  type: "bool",
-                  default: "false"
+
+                camera_fieldOfView: {
+                  type: "number",
+                  default: 0
+                },
+                camera_autoRotate: {
+                  type: "boolean",
+                  default: false
+                },
+                camera_orbit_speed: {
+                  type: "number",
+                  default: 32
+                },
+                camera_orbit_theta: {
+                  type: "number",
+                  default: 0
+                },
+                camera_orbit_phi: {
+                  type: "number",
+                  default: 75
+                },
+                camera_orbit_radius: {
+                  type: "number",
+                  default: 105
+                },
+
+                camera_target_x: {
+                  type: "number",
+                  default: 0
+                },
+                camera_target_y: {
+                  type: "number",
+                  default: 0
+                },
+                camera_target_z: {
+                  type: "number",
+                  default: 0
                 }
             },
             save( props ) {
@@ -57,14 +95,22 @@ registerBlockType(blockConfig.name, {
                         <model-viewer
                           alt={""}
                           src={props.modelViewerSrc}
+                          poster={props.modelViewerPoster}
                           ar={""}
                           ar-modes={props.modelViewerSrc}
                           camera-controls={props.arCameraControls ? "" : null}
                           enable-pan={props.arEnablePan ? "" : null}
-                          auto-rotate={props.arAutoRotate ? "" : null}
+                          auto-rotate={props.camera_autoRotate ? "" : null}
+                          rotation-per-second={props.camera_orbit_speed + "deg"}
+                          min-field-of-view={'10deg'}
+                          max-field-of-view={'180deg'}
+                          field-of-view={props.camera_fieldOfView ? props.camera_fieldOfView + "deg" : "auto"}
+                          camera-orbit={`${props.camera_orbit_theta}deg ${props.camera_orbit_phi}deg ${props.camera_orbit_radius}%`}
+                          max-camera-orbit={`-Infinity 22.5deg ${props.camera_orbit_radius}%`}
+                          camera-target={`${props.camera_target_x}m ${props.camera_target_y}m ${props.camera_target_z}m`}
                           style={{backgroundColor: props.bg_color, height: props.bl_height}}
                         />
-                    </div>);
+                    </div>)
             },
         }
     ]

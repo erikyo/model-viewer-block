@@ -7,6 +7,10 @@
         "type": "string",
         "default": null
       },
+      "modelViewerPoster": {
+        "type": "string",
+        "default": null
+      },
       "bg_color": {
         "type": "string",
         "default": "transparent"
@@ -15,22 +19,59 @@
         "type": "number",
         "default": 500
       },
+
       "arMode": {
         "type": "string",
         "default": "webxr"
       },
       "arEnablePan": {
         "type": "boolean",
-        "default": "true"
+        "default": true
       },
       "arCameraControls": {
         "type": "boolean",
-        "default": "true"
+        "default": true
       },
-      "arAutoRotate": {
+
+
+      "camera_fieldOfView": {
+        "type": "number",
+        "default": 0
+      },
+      "camera_autoRotate": {
         "type": "boolean",
-        "default": "false"
+        "default": false
+      },
+      "camera_orbit_speed": {
+        "type": "number",
+        "default": 32
+      },
+      "camera_orbit_theta": {
+        "type": "number",
+        "default": 0
+      },
+      "camera_orbit_phi": {
+        "type": "number",
+        "default": 75
+      },
+      "camera_orbit_radius": {
+        "type": "number",
+        "default": 105
+      },
+
+      "camera_target_x": {
+        "type": "number",
+        "default": 0
+      },
+      "camera_target_y": {
+        "type": "number",
+        "default": 0
+      },
+      "camera_target_z": {
+        "type": "number",
+        "default": 0
       }
+
     },
     "category": "media",
     "apiVersion": 2,

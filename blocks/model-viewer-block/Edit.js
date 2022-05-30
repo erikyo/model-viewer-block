@@ -1,6 +1,6 @@
 import { __ } from "@wordpress/i18n";
-import React, { useState } from 'react';
-import {DropZone} from '@wordpress/components';
+import { useState } from "@wordpress/element"
+import { DropZone } from "@wordpress/components"
 import './editor.scss';
 import {
 	useBlockProps,

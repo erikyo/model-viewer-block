@@ -1,15 +1,13 @@
 import '../style.scss';
-
 import modelViewer from '@google/model-viewer'
-import { useState, createElement} from "@wordpress/element";
-import React from "react";
+import { useRef, useState, createElement } from "@wordpress/element";
 import icon from "../../../assets/images/ar.svg"
 
 function ModelViewerSaved(props) {
 
   if(props.modelViewerSrc){
 
-    const modelRef = React.useRef();
+    const modelRef = useRef();
 
     const [progress, setProgress] = useState(0);
     const [arCapable, setArCapable] = useState(0);

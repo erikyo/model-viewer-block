@@ -1,4 +1,4 @@
-const { Component, render } = wp.element;
+import { render } from "@wordpress/element";
 
 import ModelViewerBlock from "./components/ModelViewerBlock";
 

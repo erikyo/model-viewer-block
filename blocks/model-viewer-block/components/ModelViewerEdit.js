@@ -1,4 +1,4 @@
-import React, { Suspense, useRef, useState, useEffect } from 'react';
+import { useState, useEffect } from "@wordpress/element"
 
 function ModelViewerObject(props) {
     if(props.modelViewerSrc){

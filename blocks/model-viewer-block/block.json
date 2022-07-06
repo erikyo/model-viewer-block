@@ -79,7 +79,7 @@
         "html": false,
         "multiple": false
     },
-    "editorScript": "file:../../build/model-viewer-block-admin-page.js",
+  "editorScript": "file:../../build/model-viewer-block-admin-page.js",
 	"editorStyle": "file:../../build/model-viewer-block-admin-page.css",
 	"style": "file:../../build/assets/js/style-blocks.frontend.css"
 }

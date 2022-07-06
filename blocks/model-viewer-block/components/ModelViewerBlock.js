@@ -112,7 +112,7 @@ function ModelViewerSaved(props) {
       style:{backgroundColor: props.bg_color, height: props.bl_height},
       onProgressCapture: (ev) => handleProgress(ev),
       onError: LogErrors,
-      onClick: handleClick,
+      // onClick: handleClick,
       ref : (ref) => modelRef.current = ref,
     }, (<>
         {annots.map((annot, idx) => (

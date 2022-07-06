@@ -15,7 +15,7 @@ registerBlockType(blockConfig.name, {
     apiVersion: 2,
     edit: Edit,
     save: Save,
-    supports: {
+     supports: {
       align: ['wide', 'full']
     },
     deprecated: [
